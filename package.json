@@ -1,0 +1,15 @@
+{
+  "name": "my-chat-app",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace apps/web start",
+    "dev:api": "npm --workspace apps/api start",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
